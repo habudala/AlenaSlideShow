@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alena SlideShow</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link type="text/css" rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+	<div id="main-wrapper">
+		<div class="container">
+			<div class="row one">
+				<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-12 col-xs-12 text-center">
+					<h1>Alena's SlideShow</h1>
+				</div>
+			</div> <!-- row one ends-->
+			<div class="row two">
+				<div class="sub row one">
+					<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+						<img id="mainImg" src="images/1.jpg"/>
+					</div>
+				</div>
+				<div class="sub row two">
+					<div class="col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2 col-sm-6 col-xs-6 text-center">
+						<input type="button" id="start" value="Start"/>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 text-center">
+						<input type="button" id="stop"value="Stop"/>
+					</div>
+				</div>
+			</div><!-- row two ends-->
+			<div class="row three">
+				<div class="sub row three">
+					<div class="col-lg-2 col-lg-offset-1 col-md-3 col-sm-4 col-xs-4">
+						<img id="smlImg1" class="smlImg" src="images/1.jpg"/>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
+						<img id="smlImg2" class="smlImg" src="images/2.jpg"/>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
+						<img id="smlImg3" class="smlImg" src="images/3.jpg"/>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
+						<img id="smlImg4" class="smlImg" src="images/4.jpg"/>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
+						<img id="smlImg5" class="smlImg" src="images/5.jpg"/>
+					</div>
+
+
+					<div class="col-lg-2 col-lg-offset-1 col-md-3 col-sm-4 col-xs-4">
+						<img id="smlImg6" class="smlImg" src="images/6.jpg"/>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
+						<img id="smlImg7" class="smlImg" src="images/7.jpg"/>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
+						<img id="smlImg8" class="smlImg" src="images/8.jpg"/>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
+						<img id="smlImg9" class="smlImg" src="images/9.jpg"/>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
+						<img id="smlImg10" class="smlImg" src="images/10.jpg"/>
+					</div>
+
+
+					<div class="col-lg-2 col-lg-offset-1 col-md-3 col-sm-4 col-xs-4">
+						<img id="smlImg11" class="smlImg" src="images/11.jpg"/>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
+						<img id="smlImg12" class="smlImg" src="images/12.jpg"/>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
+						<img id="smlImg13" class="smlImg" src="images/13.jpg"/>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
+						<img id="smlImg14" class="smlImg" src="images/14.jpg"/>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
+						<img id="smlImg15" class="smlImg" src="images/15.jpg"/>
+					</div>
+				</div>
+			
+			</div><!-- row three ends-->
+		</div><!-- container ends-->
+	</div><!-- main-wrapper ends-->
+
+
+	<script type="text/javascript">
+	
+
+	var timer;
+	var mainImage;
+	var number = 2;
+	var startButton = document.getElementById("start");
+	var stopButton = document.getElementById("stop");
+	
+
+	startButton.addEventListener("click", startSlideshow);
+	stopButton.addEventListener("click", stopSlideshow);
+
+
+	function startSlideshow () {
+		 timer = setInterval(move, 3000);
+	}
+
+	function stopSlideshow () {
+		clearInterval(timer);
+	}
+
+	function move () {
+
+	    if (number < 15) {
+	    	mainImage = document.getElementById("mainImg").src = "images/" + number + ".jpg";
+			number ++;
+			// console.log(mainImage);
+	    }else {number = 1;}
+	}
+
+	
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
