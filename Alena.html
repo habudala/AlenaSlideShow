@@ -82,6 +82,7 @@
 						<img id="smlImg15" class="smlImg" src="images/15.jpg"/>
 					</div>
 				</div>
+				<a href="" id="no">hello</a>
 			
 			</div><!-- row three ends-->
 		</div><!-- container ends-->
@@ -89,14 +90,21 @@
 
 
 	<script type="text/javascript">
-	
 
+
+	// DECLARING MY GLOBAL VARIABLES
+
+	var currImage;
+	var tempSrc;
+	var smallImage;
 	var timer;
 	var mainImage;
 	var number = 2;
 	var startButton = document.getElementById("start");
 	var stopButton = document.getElementById("stop");
 	
+// CREATING THE SLIDESHOW EFFECT HERE
+
 
 	startButton.addEventListener("click", startSlideshow);
 	stopButton.addEventListener("click", stopSlideshow);
@@ -119,6 +127,28 @@
 	    }else {number = 1;}
 	}
 
+
+
+	// ADDING THE ABILITY TO CLICK ON AN IMAGE SO THAT IT FILLS THE MAIN SLOT HERE
+
+
+	smallImage = document.getElementsByClassName("smlImg");
+
+	for (i=0; i<smallImage.length; i++) {
+		smallImage[i].addEventListener("click", substitute);
+	}
+
+	function substitute () {
+		// console.log(this.src);
+		tempSrc = this.src;
+		currImage = document.getElementById("mainImg");
+		currImage.src = tempSrc;
+
+		console.log(currImage);
+		// console.log(this.src);
+
+	}
+	// DON'T FORGET TO ASK TOBY ABOUT THE SRC UP OR DOWN!!!
 	
 	</script>
 
