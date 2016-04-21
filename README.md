@@ -4,12 +4,14 @@
 
 Some features I used:
 
-###### -Bootstrap Responsive design so that the page would scale nicely
+###### -Bootstrap Responsive design so that the page would scale nicely (not that it 
+######  needs it...)
 	  
-	   -Some CSS3 styling elements to make it more pleasing to the eye (arguably)
+###### -Some CSS3 styling elements to make it more pleasing to the eye (arguably)
 
-	   -SetInterval and clearInterval methods (just to practice a bit)
+###### -SetInterval and clearInterval methods (just to practice a bit)
 
-	   -For loop to get through my nodeColection object (pretty proud of it as it's my first time using DOM traversal tools instead of just generic getElementById/ClassName)
+###### -For loop to get through my nodeColection object (pretty proud of it as it's my 
+###### first time using DOM traversal tools instead of just generic getElementById/	######ClassName)
 
-	   -"this" keyword practice (worked like a charm... Duh!)
+###### -"this" keyword practice (worked like a charm... Duh!)
