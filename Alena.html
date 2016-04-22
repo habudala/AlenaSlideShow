@@ -120,11 +120,12 @@
 
 	function move () {
 
-	    if (number < 15) {
+	    if (number <= 15) {
 	    	mainImage = document.getElementById("mainImg").src = "images/" + number + ".jpg";
 			number ++;
 			// console.log(mainImage);
-	    }else {number = 1;}
+	    }else {number = 1;
+	    	   stopSlideshow();}
 	}
 
 
@@ -135,16 +136,16 @@
 	smallImage = document.getElementsByClassName("smlImg");
 
 	for (i=0; i<smallImage.length; i++) {
-		smallImage[i].addEventListener("click", substitute);
+		smallImage[(i)].addEventListener("click", substitute);
 	}
-
+	console.log(smallImage.length);
 	function substitute () {
 		// console.log(this.src);
 		tempSrc = this.src;
-		currImage = document.getElementById("mainImg");
-		currImage.src = tempSrc;
+		mainImage = document.getElementById("mainImg");
+		mainImage.src = tempSrc;
 
-		console.log(currImage);
+		//console.log(currImage);
 		// console.log(this.src);
 
 	}
