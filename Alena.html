@@ -139,9 +139,13 @@
 		smallImage[(i)].addEventListener("click", substitute);
 	}
 	console.log(smallImage.length);
-	function substitute () {
-		// console.log(this.src);
-		tempSrc = this.src;
+	function substitute (e) {
+		
+	// MAKING SURE IT WILL WORK IN OLDER VERSIONS OF IE 5+...	
+		if (!e) { e = window.event;}
+		targetEl = e.target || e.srcElement;
+		tempSrc = targetEl.src;
+
 		mainImage = document.getElementById("mainImg");
 		mainImage.src = tempSrc;
 
