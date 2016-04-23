@@ -136,7 +136,9 @@
 	smallImage = document.getElementsByClassName("smlImg");
 
 	for (i=0; i<smallImage.length; i++) {
-		smallImage[(i)].addEventListener("click", substitute);
+		if(smallImage[i].addEventListener) {
+		smallImage[i].addEventListener("click", substitute);
+		}else{smallimage[i].attachEvent("onclick", substitute);}
 	}
 	console.log(smallImage.length);
 	function substitute (e) {
