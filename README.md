@@ -16,3 +16,5 @@ Some features I used:
 ###### -"this" keyword practice (worked like a charm... Duh!)
 
 ###### - also, optimized the targeting of elements using the event object's target/srcElement property (instead ###### of the this keyword and ) so it would work in older versions of IE5 ++
+
+###### I also implement a conditional statement to check if the browser supports the addEventListener method. In case it doesn't, I tell the code to run attachEvent() method (mostly for IE 5-8)
